@@ -34,9 +34,9 @@ const EnquiryForm = ({ defaultInterest = "Holiday" }) => {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-xs uppercase tracking-widest text-[#1C1C1C] mb-3 font-semibold">I am interested in *</label>
-            <div className="grid grid-cols-3 gap-3">
-              {['Holiday', 'Event', 'Wedding'].map((type) => (
+            <label className="block text-xs uppercase tracking-widest text-[#1C1C1C] mb-3 font-semibold">I am interested*</label>
+            {/* <div className="grid grid-cols-3 gap-3">
+              {['Holiday'].map((type) => (
                 <button
                   key={type}
                   type="button"
@@ -48,7 +48,7 @@ const EnquiryForm = ({ defaultInterest = "Holiday" }) => {
                   {type}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -67,7 +67,7 @@ const EnquiryForm = ({ defaultInterest = "Holiday" }) => {
           </div>
 
           {/* Dynamic Fields */}
-          {interest === 'Holiday' && (
+          {/* {interest === 'Holiday' && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
               <div>
                 <label className="block text-[11px] uppercase tracking-widest text-[#555] mb-2">Destination of Interest</label>
@@ -91,9 +91,9 @@ const EnquiryForm = ({ defaultInterest = "Holiday" }) => {
                 </select>
               </div>
             </div>
-          )}
+          )} */}
 
-          {interest === 'Event' && (
+          {/* {interest === 'Event' && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
               <div>
                 <label className="block text-[11px] uppercase tracking-widest text-[#555] mb-2">Event Type</label>
@@ -119,9 +119,9 @@ const EnquiryForm = ({ defaultInterest = "Holiday" }) => {
                 <input type="number" name="guests" value={formData.guests} onChange={handleChange} placeholder="e.g. 150 Guests" className="w-full bg-white border border-[#E5DCC3] px-4 py-3 text-xs text-[#1C1C1C] focus:outline-none focus:border-[#D4AF37]" />
               </div>
             </div>
-          )}
+          )} */}
 
-          {interest === 'Wedding' && (
+          {/* {interest === 'Wedding' && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
               <div>
                 <label className="block text-[11px] uppercase tracking-widest text-[#555] mb-2">Preferred Wedding Destination</label>
@@ -145,7 +145,7 @@ const EnquiryForm = ({ defaultInterest = "Holiday" }) => {
                 </select>
               </div>
             </div>
-          )}
+          )} */}
 
           <div>
             <label className="block text-[11px] uppercase tracking-widest text-[#555] mb-2">Bespoke Requirements / Message</label>
