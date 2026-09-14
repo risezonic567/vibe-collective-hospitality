@@ -60,14 +60,14 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="max-w-7xl text-white mx-auto px-6 md:px-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col md:flex-row justify-between items-center text-[16px] text-[#FAF9F6]/40">
+    <div className="max-w-7xl text-gray-300 mx-auto px-6 md:px-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col md:flex-row justify-between items-center text-[16px] text-[#FAF9F6]/40">
       <p>© 2026 Vibe Collective Hospitality. All rights reserved.</p>
 
         {/* <div className="flex space-x-6 mt-4 md:mt-0">
       <p>Developed By <a href='https://risezonic.com' className='text-[#D4AF37]'>Risezonic</a> </p>
       </div> */}
 
-      <div className="flex text-white space-x-6 mt-4 md:mt-0">
+      <div className="flex text-gray-300 space-x-6 mt-4 md:mt-0">
         <a href="#privacy" className="hover:text-[#FAF9F6]/80">Privacy Policy</a>
         <a href="#terms" className="hover:text-[#FAF9F6]/80">Terms of Service</a>
       </div>
