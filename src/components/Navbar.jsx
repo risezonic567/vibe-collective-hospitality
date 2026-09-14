@@ -26,11 +26,11 @@ const Navbar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? "bg-[#1C1C1C]/95 backdrop-blur-md py-4 border-b border-[#D4AF37]/20 shadow-xl" : "bg-gradient-to-b from-black/80 via-black/60 to-transparent py-6"
+      isScrolled ? "bg-white py-4 border-b border-[#D4AF37]/20 shadow-xl" : "bg-white  py-6"
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link to="/" className="group flex flex-col">
-          <span className="font-serif text-xl md:text-2xl tracking-[0.2em] text-[#FAF9F6] font-light uppercase group-hover:text-[#D4AF37] transition-colors">
+          <span className="font-serif text-xl md:text-2xl tracking-[0.2em]  font-light uppercase text-[#D4AF37] transition-colors">
             Vibe Collective
           </span>
           <span className="text-[9px] tracking-[0.35em] text-[#D4AF37] uppercase font-sans font-medium">
@@ -46,7 +46,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={`text-xs uppercase tracking-[0.2em] transition-colors duration-300 relative py-1 ${
-                  isActive ? "text-[#D4AF37]" : "text-[#FAF9F6]/80 hover:text-[#FAF9F6]"
+                  isActive ? "text-[#D4AF37]" : "text-black "
                 }`}
               >
                 {link.name}
@@ -61,14 +61,14 @@ const Navbar = () => {
           })}
         </nav>
 
-        <div className="hidden md:flex items-center">
+        {/* <div className="hidden md:flex items-center">
           <Link
             to="/contact"
             className="px-6 py-2.5 text-xs uppercase tracking-[0.2em] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1C1C1C] transition-all duration-300 font-medium"
           >
             Enquire Now
           </Link>
-        </div>
+        </div> */}
 
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -99,13 +99,13 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="inline-block text-center px-6 py-3 text-xs uppercase tracking-[0.2em] bg-[#D4AF37] text-[#1C1C1C] font-semibold mt-4"
               >
                 Enquire Now
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         )}

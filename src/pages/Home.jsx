@@ -14,10 +14,10 @@ const Home = () => {
 
   return (
     <div className="bg-[#FAF9F6]">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop"
+            src="/Images/Image.jpg.jpeg"
             alt="Luxury Hospitality"
             className="w-full h-full object-cover filter brightness-75 scale-105 transition-transform duration-10000"
           />
@@ -82,8 +82,6 @@ const Home = () => {
           sophistication. Nestled atop majestic cliffs, The Grand Horizon offers
           breathtaking ocean views, private beach access, and handcrafted luxury
           experiences designed for royalty.
-
-       
         </p>
             <button onClick={() => navigate(`/about`)} className="text-sm uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] mt-6 text-center mx-auto items-center pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
                   OUR STORY →
