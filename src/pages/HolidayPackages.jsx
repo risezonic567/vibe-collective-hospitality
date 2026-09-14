@@ -7,7 +7,7 @@ const HolidayPackages = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#FAF9F6] pt-32 pb-24">
+  <div className="bg-[#FAF9F6] pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionTitle subtitle="Bespoke Travel" title="Curated Holiday Packages" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

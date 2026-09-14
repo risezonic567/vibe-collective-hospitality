@@ -1,28 +1,28 @@
 import React from 'react';
-import SectionTitle from '../components/SectionTitle';
-import WhyVibeCollective from '../components/home/WhyVibeCollective';
+import AboutIntro from '../components/AboutIntro';
+
 
 const About = () => (
-  <div className="bg-[#FAF9F6] pt-32 pb-24">
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
-      <SectionTitle subtitle="Our Essence" title="Creating Journeys, Celebrations & Experiences Worth Remembering." />
-      <div className="mt-16 space-y-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37] block mb-2">Our Story</span>
-            <h3 className="text-2xl font-serif text-[#1C1C1C] mb-4">Born Out of Passion for Artful Hospitality</h3>
-            <p className="text-xs text-[#555] leading-relaxed mb-4">
-              Vibe Collective Hospitality was founded on a singular vision: to dismantle generic travel templates and usher in bespoke, elevated hospitality experiences tailored to refined tastemakers.
-            </p>
-          </div>
-          <div className="h-96">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop" alt="Our Story" className="w-full h-full object-cover shadow-lg" />
-          </div>
+ <div className="bg-[#FAF9F6]">
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop"
+            alt="Luxury Hospitality"
+            className="w-full h-full object-cover filter brightness-75 scale-105 transition-transform duration-10000"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/40 to-black/60" />
         </div>
-      </div>
+
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-16">
+        
+        </div>
+      </section>
+
+    <AboutIntro/>
+
+   
     </div>
-    <WhyVibeCollective/>
-  </div>
 );
 
 export default About;

@@ -64,7 +64,7 @@ const Home = () => {
         </div>
       </section> */}
 
-       <section className="py-16 px-4 md:px-12 max-w-7xl mx-auto">
+       <section className="py-10 px-4 md:px-12 max-w-7xl mx-auto">
       
       {/* Content */}
       <div className="max-w-5xl mx-auto text-center">
@@ -82,18 +82,26 @@ const Home = () => {
           sophistication. Nestled atop majestic cliffs, The Grand Horizon offers
           breathtaking ocean views, private beach access, and handcrafted luxury
           experiences designed for royalty.
+
+       
         </p>
+            <button onClick={() => navigate(`/about`)} className="text-sm uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] mt-6 text-center mx-auto items-center pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
+                  OUR STORY →
+                </button>
       </div>
 
       <div className="mt-10 flex justify-center">
         <img
           src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
           alt="Hotel Main View"
-          className="w-full max-w-4xl h-[300px] md:h-[450px] object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02]"
+          className="w-full max-w-4xl h-[300px] md:h-[400px] object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02]"
         />
+          
       </div>
+    
 
     </section>
+    
 
 
 

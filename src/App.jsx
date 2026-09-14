@@ -29,8 +29,8 @@ export default function App() {
             <Route path="/holiday-packages/:slug" element={<PackageDetails />} />
             <Route path="/events" element={<Events />} />
             <Route path="/events/:slug" element={<EventDetails />} />
-            <Route path="/weddings" element={<Weddings />} />
-            <Route path="/weddings/:slug" element={<WeddingDetails />} />
+            {/* <Route path="/weddings" element={<Weddings />} /> */}
+            {/* <Route path="/weddings/:slug" element={<WeddingDetails />} /> */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

@@ -30,7 +30,7 @@ const WhyVibeCollective = () => {
             <div key={index} className="text-center p-8 bg-[#FAF9F6] border border-[#D4AF37]/20 hover:border-[#D4AF37] transition-all duration-300">
               <div className="flex justify-center mb-6">{feat.icon}</div>
               <h3 className="text-xl font-serif text-black mb-4">{feat.title}</h3>
-              <p className="text-xs text-black/70 leading-relaxed">{feat.desc}</p>
+              <p className="text-sm text-black/70 leading-relaxed">{feat.desc}</p>
             </div>
           ))}
         </div>
