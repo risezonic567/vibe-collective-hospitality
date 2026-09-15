@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import { weddingsData } from '../data/hospitalityData';
 
@@ -23,9 +23,9 @@ const Weddings = () => {
                 </div>
               </div>
               <div className="p-6 pt-0">
-                <button onClick={() => navigate(`/weddings/${w.slug}`)} className="w-full py-3 cursor-pointer bg-[#1C1C1C] text-[#FAF9F6] text-xs uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#1C1C1C] transition-colors">
+                <Link to={`/weddings/${w.slug}`} className="text-xs cursor-pointer uppercase tracking-widest text-[#D4AF37] font-semibold hover:underline text-left">
                   Explore Wedding →
-                </button>
+                </Link>
               </div>
             </div>
           ))}

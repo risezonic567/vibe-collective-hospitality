@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import { eventsData } from '../data/hospitalityData';
 
@@ -16,9 +16,9 @@ const Events = () => {
               <img src={ev.heroImage} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-75" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-8 flex flex-col justify-end">
                 <h3 className="text-2xl font-serif text-[#FAF9F6] mb-2">{ev.title}</h3>
-                <button onClick={() => navigate(`/events/${ev.slug}`)} className="text-xs cursor-pointer uppercase tracking-widest text-[#D4AF37] font-semibold hover:underline text-left">
+                <Link to={`/events/${ev.slug}`} className="text-xs cursor-pointer uppercase tracking-widest text-[#D4AF37] font-semibold hover:underline text-left">
                   Explore Capabilities →
-                </button>
+                </Link>
               </div>
             </div>
           ))}

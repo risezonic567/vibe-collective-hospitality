@@ -256,7 +256,6 @@ export default function Home() {
                   {isGuestOpen && (
                     <div className="absolute top-full left-0 mt-3 w-[280px] bg-white rounded-xl shadow-2xl border border-[#D4AF37]/20 p-5 z-50">
 
-
                       <div className="flex items-center justify-between py-3 border-b border-gray-100">
                         <div>
                           <p className="text-sm font-medium text-gray-900">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import { holidayPackagesData } from '../data/hospitalityData';
 
@@ -24,9 +24,9 @@ const HolidayPackages = () => {
                 </div>
               </div>
               <div className="p-6 pt-0">
-                <button onClick={() => navigate(`/holiday-packages/${pkg.slug}`)} className="w-full cursor-pointer py-3 bg-[#1C1C1C] text-[#FAF9F6] text-xs uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#1C1C1C] transition-colors">
-                  View Package Details
-                </button>
+                <Link to={`/holiday-packages/${pkg.slug}`} className="text-xs cursor-pointer uppercase tracking-widest text-[#D4AF37] font-semibold hover:underline text-left">
+                                 Explore Capabilities →
+                               </Link>
               </div>
             </div>
           ))}
