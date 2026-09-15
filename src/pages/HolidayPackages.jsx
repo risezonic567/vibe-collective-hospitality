@@ -4,10 +4,10 @@ import SectionTitle from '../components/SectionTitle';
 import { holidayPackagesData } from '../data/hospitalityData';
 
 const HolidayPackages = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
-  <div className="bg-[#FAF9F6] pt-32 pb-20">
+    <div className="bg-[#FAF9F6] pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionTitle subtitle="Bespoke Travel" title="Curated Holiday Packages" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -25,8 +25,8 @@ const HolidayPackages = () => {
               </div>
               <div className="p-6 pt-0">
                 <Link to={`/holiday-packages/${pkg.slug}`} className="text-xs cursor-pointer uppercase tracking-widest text-[#D4AF37] font-semibold hover:underline text-left">
-                                 Explore Capabilities →
-                               </Link>
+                  Explore Capabilities →
+                </Link>
               </div>
             </div>
           ))}

@@ -37,7 +37,6 @@ const EventDetails = () => {
 
   return (
     <main className="bg-[#FAF9F6] text-[#1C1C1C] pt-20">
-      {/* ================= HERO ================= */}
       <section className="relative h-[65vh] min-h-[500px] overflow-hidden">
         <img
           src={ev.heroImage}
@@ -45,10 +44,8 @@ const EventDetails = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
           className="absolute top-8 left-6 md:left-12 z-10 flex items-center gap-2 text-white text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors"
@@ -57,7 +54,6 @@ const EventDetails = () => {
           Back
         </button>
 
-        {/* Hero Content */}
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="max-w-7xl mx-auto px-6 md:px-12 pb-14">
             <div className="flex items-center gap-2 text-[#D4AF37] text-xs uppercase tracking-[0.25em] mb-5">
@@ -78,7 +74,6 @@ const EventDetails = () => {
         </div>
       </section>
 
-      {/* ================= OVERVIEW ================= */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-[#B8941F] text-xs uppercase tracking-[0.3em] font-semibold">
@@ -99,11 +94,9 @@ const EventDetails = () => {
         </div>
       </section>
 
-      {/* ================= SERVICES ================= */}
       {ev.services?.length > 0 && (
         <section className="bg-white py-20 md:py-24 px-6">
           <div className="max-w-7xl mx-auto">
-            {/* Heading */}
             <div className="text-center max-w-2xl mx-auto mb-14">
               <span className="text-[#B8941F] text-xs uppercase tracking-[0.3em] font-semibold">
                 Our Expertise
@@ -119,7 +112,6 @@ const EventDetails = () => {
               </p>
             </div>
 
-            {/* Services */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
               {ev.services.map((service, index) => {
                 const Icon = serviceIcons[index] || Check;
@@ -148,11 +140,9 @@ const EventDetails = () => {
         </section>
       )}
 
-      {/* ================= WHY US ================= */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
-            {/* Image */}
             <div className="relative h-[450px] md:h-[550px] overflow-hidden">
               <img
                 src={ev.heroImage}
@@ -163,7 +153,6 @@ const EventDetails = () => {
               <div className="absolute inset-0 bg-black/10" />
             </div>
 
-            {/* Content */}
             <div>
               <span className="text-[#B8941F] text-xs uppercase tracking-[0.3em] font-semibold">
                 The Vibe Collective Difference
@@ -212,7 +201,6 @@ const EventDetails = () => {
         </div>
       </section>
 
-      {/* ================= STATS ================= */}
       <section className="bg-[#1C1C1C] text-white py-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
@@ -265,7 +253,6 @@ const EventDetails = () => {
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <img
           src={ev.heroImage}

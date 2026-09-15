@@ -399,7 +399,6 @@ export default function Home() {
                   )}
                 </div>
 
-                {/* SEARCH BUTTON */}
                 <div className="lg:col-span-2 px-2 flex items-center justify-center">
                   <button
                     type="submit"
