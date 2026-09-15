@@ -172,6 +172,7 @@ export const weddingsData =[
     }
   }
 ];
+
 export const galleryData = [
   { 
     url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop", 

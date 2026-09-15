@@ -20,7 +20,6 @@ import SectionTitle from '../components/SectionTitle';
 import { holidayPackagesData, weddingsData, eventsData, galleryData } from '../data/hospitalityData';
 
 import WhyVibeCollective from '../components/home/WhyVibeCollective';
-// import Gallery from '../components/home/Gallery';
 import Testimonials from '../components/home/Testimonials';
 
 export default function Home() {
@@ -616,8 +615,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* WEDDINGS SECTION */}
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle subtitle="Weddings" title="Timeless Celebrations, Beautifully Crafted" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -659,8 +656,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <Gallery /> */}
-
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle
           subtitle="Visual Storytelling"
@@ -691,7 +686,6 @@ export default function Home() {
           )}
         </div>
 
-        {/* Show More / Show Less */}
         {galleryData.length > 6 && (
           <div className="flex justify-center mt-12">
             <button
@@ -704,9 +698,6 @@ export default function Home() {
           </div>
         )}
       </section>
-
-
-
 
       <Testimonials />
     </div>
