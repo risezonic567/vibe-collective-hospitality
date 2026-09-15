@@ -114,13 +114,13 @@ export const eventsData = [
   }
 ];
 
-export const weddingsData = [
+export const weddingsData =[
   {
     id: "udaipur-destination-wedding",
     slug: "udaipur-destination-wedding",
     title: "Udaipur Destination Wedding",
     destination: "Udaipur, India",
-    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop",
     shortDesc: "A regal fairy-tale celebration amidst royal lake palaces, candlelit ghats, and royal heritage.",
     overview: "Transform your nuptials into a royal legacy. Udaipur offers majestic palace backdrops, floating grand entrances across Lake Pichola, and timeless Rajasthani grandeur.",
     features: ["Palace Hotel Buyouts", "Royal Boat Processions", "Custom Imperial Scenography", "Curated Royal Rajasthani Banquet"],
@@ -133,13 +133,13 @@ export const weddingsData = [
       hospitality: "Dedicated 24/7 Guest Concierge Team"
     }
   },
-  
+
   {
     id: "goa-beachfront-wedding",
     slug: "goa-beachfront-wedding",
     title: "Goa Luxury Beachfront Nuptials",
     destination: "Goa, India",
-    heroImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1600&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop",
     shortDesc: "Golden hour sunset vows, bohemian-chic beach galas, and vibrant coastal celebrations.",
     overview: "Combine coastal elegance with high-energy celebrations. Vibe Collective curates private beach resorts, sunset mandaps, and world-class culinary galas in Goa.",
     features: ["Private Beach Access Mandap", "Sunset Champagne Cocktail Soirees", "Beachside Sundowner Parties"],
@@ -158,7 +158,7 @@ export const weddingsData = [
     slug: "dubai-royal-palace-wedding",
     title: "Dubai Glamour & Desert Nuptials",
     destination: "Dubai, UAE",
-    heroImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop",
     shortDesc: "Ultra-modern skyline grandeur or private desert dunes lighted by thousands of lanterns.",
     overview: "Dubai delivers unmatched scale and luxury. From ballroom galas overlooking the Burj Khalifa to private sand dune mandaps under starry Arabian skies.",
     features: ["Helicopter Groom Entrances", "Burj Skyline View Venues", "Private Desert Oasis Privatization"],
@@ -170,24 +170,54 @@ export const weddingsData = [
       transfers: "Supercar Fleet & Chauffeured Chauffeurs",
       hospitality: "VIP Airport Meet-and-Greet Concierge"
     }
+  }
+];
+export const galleryData = [
+  { 
+    url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop", 
+    title: "Luxury Resort Sanctuary", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop", 
+    title: "5-Star Heritage Suites", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800&auto=format&fit=crop", 
+    title: "Overwater Ocean Villas", 
   },
 
-   {
-    id: "dubai-royal-palace-wedding",
-    slug: "dubai-royal-palace-wedding",
-    title: "Dubai Glamour & Desert Nuptials",
-    destination: "Dubai, UAE",
-    heroImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
-    shortDesc: "Ultra-modern skyline grandeur or private desert dunes lighted by thousands of lanterns.",
-    overview: "Dubai delivers unmatched scale and luxury. From ballroom galas overlooking the Burj Khalifa to private sand dune mandaps under starry Arabian skies.",
-    features: ["Helicopter Groom Entrances", "Burj Skyline View Venues", "Private Desert Oasis Privatization"],
-    details: {
-      venue: "Palatial Ballrooms & Private Desert Reserves",
-      accommodation: "Iconic Luxury City Suites & Desert Resorts",
-      decor: "Avant-Garde Architectural Lighting & Floral Sculptures",
-      catering: "Michelin-Standard Global Gastronomy",
-      transfers: "Supercar Fleet & Chauffeured Chauffeurs",
-      hospitality: "VIP Airport Meet-and-Greet Concierge"
-    }
+  { 
+    url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop", 
+    title: "Regal Mandap Celebrations", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop", 
+    title: "Beachfront Sunset Vows", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop", 
+    title: "Royal Reception Galas", 
+  },
+
+  { 
+    url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop", 
+    title: "Corporate Summits & Galas", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop", 
+    title: "Imperial Palace Dinners", 
+  },
+
+  { 
+    url: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop", 
+    title: "Alpine Chalet Retreats", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop", 
+    title: "Tropical Island Expeditions", 
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=800&auto=format&fit=crop", 
+    title: "Desert Safari Journeys", 
   }
 ];

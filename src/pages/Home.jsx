@@ -17,16 +17,18 @@ import {
   X,
 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
-import { holidayPackagesData, weddingsData } from '../data/hospitalityData';
+import { holidayPackagesData, weddingsData,eventsData,galleryData } from '../data/hospitalityData';
 
 import WhyVibeCollective from '../components/home/WhyVibeCollective';
-import Gallery from '../components/home/Gallery';
+// import Gallery from '../components/home/Gallery';
 import Testimonials from '../components/home/Testimonials';
 
 export default function Home() {
   const navigate = useNavigate();
 
   const [isGuestOpen, setIsGuestOpen] = useState(false);
+
+  const [showAllGallery, setShowAllGallery] = useState(false);
 
   const [activeTab, setActiveTab] = useState('Hotel');
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
@@ -235,24 +237,6 @@ export default function Home() {
                     )}
                   </div>
                 </div>
-
-                {/* <div className="lg:col-span-2 px-3 py-1 flex flex-col justify-center">
-                  <label className="text-[11px] font-semibold tracking-wider uppercase text-[#D4AF37] mb-1 flex items-center gap-1.5">
-                    <Users className="w-3.5 h-3.5 text-[#D4AF37]" />
-                    Guests
-                  </label>
-                  <select
-                    name="guests"
-                    value={formData.guests}
-                    onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                    className="w-full bg-transparent text-gray-900 font-serif text-xs sm:text-sm focus:outline-none border-none p-0 cursor-pointer"
-                  >
-                    <option value="1 Adult - 0 Children - 1 Room">1 Adult - 1 Room</option>
-                    <option value="2 Adults - 0 Children - 1 Room">2 Adults - 1 Room</option>
-                    <option value="2 Adults - 1 Child - 1 Room">2 Adults - 1 Child - 1 Room</option>
-                    <option value="4 Adults - 2 Children - 2 Rooms">4 Adults - 2 Rooms</option>
-                  </select>
-                </div> */}
 
                 <div className="lg:col-span-2 px-3 py-1 flex flex-col justify-center relative">
                   <label className="text-[11px] font-semibold tracking-wider uppercase text-[#D4AF37] mb-2 flex items-center gap-1.5">
@@ -585,9 +569,45 @@ export default function Home() {
         </div>
       </section>
 
+       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+        <SectionTitle subtitle="Our Events" title="Celebrations Beyond Ordinary" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          {eventsData.slice(0,3).map((pkg) => (
+            <div
+              key={pkg.id}
+              className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+            >
+              <div className="h-64 overflow-hidden relative">
+                <img
+                  src={pkg.heroImage}
+                  alt={pkg.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-semibold block mb-1">
+                  {pkg.destination}
+                </span>
+                <h3 className="text-lg font-serif text-[#1C1C1C] mb-3">{pkg.title}</h3>
+                <p className="text-xs text-[#555] leading-relaxed mb-6 line-clamp-2">
+                  {pkg.shortDesc}
+                </p>
+                <button
+                  onClick={() => navigate(`/holiday-packages/${pkg.slug}`)}
+                  className="text-xs uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
+                >
+                  Explore Package →
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
       {/* WEDDINGS SECTION */}
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
-        <SectionTitle subtitle="Destinations Weddings" title="Explore Our Weddings" />
+        <SectionTitle subtitle="Weddings" title="Timeless Celebrations, Beautifully Crafted" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {weddingsData.slice(0, 3).map((pkg) => (
             <div
@@ -621,7 +641,52 @@ export default function Home() {
         </div>
       </section>
 
-      <Gallery />
+      {/* <Gallery /> */}
+
+       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+  <SectionTitle
+    subtitle="Visual Storytelling"
+    title="A Glimpse Into Luxury"
+  />
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12">
+    {(showAllGallery ? galleryData : galleryData.slice(3, 9)).map(
+      (img, idx) => (
+        <div
+          key={idx}
+          className="group relative h-72 overflow-hidden shadow-md"
+        >
+          <img
+            src={img.url}
+            alt={img.title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold">
+              {img.title}
+            </span>
+         
+          </div>
+        </div>
+      )
+    )}
+  </div>
+
+  {/* Show More / Show Less */}
+  {galleryData.length > 6 && (
+    <div className="flex justify-center mt-12">
+      <button
+        type="button"
+        onClick={() => setShowAllGallery(!showAllGallery)}
+        className="px-8 py-3 border border-[#D4AF37] cursor-pointer text-[#1C1C1C] text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#D4AF37] transition-all duration-300"
+      >
+        {showAllGallery ? "Show Less" : "Show More"}
+      </button>
+    </div>
+  )}
+</section>
+
       <Testimonials />
     </div>
   );
