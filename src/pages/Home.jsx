@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   MapPin,
@@ -17,7 +17,7 @@ import {
   X,
 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
-import { holidayPackagesData, weddingsData,eventsData,galleryData } from '../data/hospitalityData';
+import { holidayPackagesData, weddingsData, eventsData, galleryData } from '../data/hospitalityData';
 
 import WhyVibeCollective from '../components/home/WhyVibeCollective';
 // import Gallery from '../components/home/Gallery';
@@ -497,7 +497,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT / WELCOME SECTION */}
       <section className="py-10 px-4 md:px-12 max-w-7xl mx-auto">
         <div className="max-w-5xl mx-auto text-center">
           <span className="text-amber-600 font-semibold uppercase tracking-widest text-sm">
@@ -533,7 +532,6 @@ export default function Home() {
 
       <WhyVibeCollective />
 
-      {/* JOURNEYS SECTION */}
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle subtitle="Destinations" title="Explore Our Journeys" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -557,47 +555,61 @@ export default function Home() {
                 <p className="text-xs text-[#555] leading-relaxed mb-6 line-clamp-2">
                   {pkg.shortDesc}
                 </p>
-                <button
+                {/* <button
                   onClick={() => navigate(`/holiday-packages/${pkg.slug}`)}
                   className="text-xs uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
                 >
                   Explore Package →
-                </button>
+                </button> */}
+
+                <Link
+                  to={`/holiday-packages/${pkg.slug}`}
+                  className="text-xs uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
+                >
+                  Explore Package →
+                </Link>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+      <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle subtitle="Our Events" title="Celebrations Beyond Ordinary" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {eventsData.slice(0,3).map((pkg) => (
+          {eventsData.slice(0, 3).map((event) => (
             <div
-              key={pkg.id}
+              key={event.id}
               className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="h-64 overflow-hidden relative">
                 <img
-                  src={pkg.heroImage}
-                  alt={pkg.title}
+                  src={event.heroImage}
+                  alt={event.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-semibold block mb-1">
-                  {pkg.destination}
+                  {event.destination}
                 </span>
-                <h3 className="text-lg font-serif text-[#1C1C1C] mb-3">{pkg.title}</h3>
+                <h3 className="text-lg font-serif text-[#1C1C1C] mb-3">{event.title}</h3>
                 <p className="text-xs text-[#555] leading-relaxed mb-6 line-clamp-2">
-                  {pkg.shortDesc}
+                  {event.shortDesc}
                 </p>
-                <button
-                  onClick={() => navigate(`/holiday-packages/${pkg.slug}`)}
+                {/* <button
+                  onClick={() => navigate(`/events/${event.slug}`)}
                   className="text-xs uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
                 >
                   Explore Package →
-                </button>
+                </button> */}
+
+                <Link
+                  to={`/events/${event.slug}`}
+                  className="text-xs uppercase tracking-widest text-[#1C1C1C] font-semibold cursor-pointer border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
+                >
+                  Explore Package →
+                </Link>
               </div>
             </div>
           ))}
@@ -609,32 +621,38 @@ export default function Home() {
       <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
         <SectionTitle subtitle="Weddings" title="Timeless Celebrations, Beautifully Crafted" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {weddingsData.slice(0, 3).map((pkg) => (
+          {weddingsData.slice(0, 3).map((wedding) => (
             <div
-              key={pkg.id}
+              key={wedding.id}
               className="group bg-white border border-[#E5DCC3] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="h-64 overflow-hidden relative">
                 <img
-                  src={pkg.heroImage}
-                  alt={pkg.title}
+                  src={wedding.heroImage}
+                  alt={wedding.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-semibold block mb-1">
-                  {pkg.destination}
+                  {wedding.destination}
                 </span>
-                <h3 className="text-lg font-serif text-[#1C1C1C] mb-3">{pkg.title}</h3>
+                <h3 className="text-lg font-serif text-[#1C1C1C] mb-3">{wedding.title}</h3>
                 <p className="text-xs text-[#555] leading-relaxed mb-6 line-clamp-2">
-                  {pkg.shortDesc}
+                  {wedding.shortDesc}
                 </p>
-                <button
-                  onClick={() => navigate(`/weddings/${pkg.slug}`)}
+                {/* <button
+                  onClick={() => navigate(`/weddings/${wedding.slug}`)}
                   className="text-xs uppercase tracking-widest text-[#1C1C1C] cursor-pointer font-semibold border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
                 >
                   Explore Package →
-                </button>
+                </button> */}
+                  <Link
+                 to={`/weddings/${wedding.slug}`}
+                  className="text-xs uppercase tracking-widest text-[#1C1C1C] cursor-pointer font-semibold border-b border-[#1C1C1C] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors"
+                >
+                  Explore Package →
+                </Link>
               </div>
             </div>
           ))}
@@ -643,49 +661,52 @@ export default function Home() {
 
       {/* <Gallery /> */}
 
-       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-  <SectionTitle
-    subtitle="Visual Storytelling"
-    title="A Glimpse Into Luxury"
-  />
+      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <SectionTitle
+          subtitle="Visual Storytelling"
+          title="A Glimpse Into Luxury"
+        />
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12">
-    {(showAllGallery ? galleryData : galleryData.slice(3, 9)).map(
-      (img, idx) => (
-        <div
-          key={idx}
-          className="group relative h-72 overflow-hidden shadow-md"
-        >
-          <img
-            src={img.url}
-            alt={img.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12">
+          {(showAllGallery ? galleryData : galleryData.slice(3, 9)).map(
+            (img, idx) => (
+              <div
+                key={idx}
+                className="group relative h-72 overflow-hidden shadow-md"
+              >
+                <img
+                  src={img.url}
+                  alt={img.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold">
-              {img.title}
-            </span>
-         
-          </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold">
+                    {img.title}
+                  </span>
+
+                </div>
+              </div>
+            )
+          )}
         </div>
-      )
-    )}
-  </div>
 
-  {/* Show More / Show Less */}
-  {galleryData.length > 6 && (
-    <div className="flex justify-center mt-12">
-      <button
-        type="button"
-        onClick={() => setShowAllGallery(!showAllGallery)}
-        className="px-8 py-3 border border-[#D4AF37] cursor-pointer text-[#1C1C1C] text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#D4AF37] transition-all duration-300"
-      >
-        {showAllGallery ? "Show Less" : "Show More"}
-      </button>
-    </div>
-  )}
-</section>
+        {/* Show More / Show Less */}
+        {galleryData.length > 6 && (
+          <div className="flex justify-center mt-12">
+            <button
+              type="button"
+              onClick={() => setShowAllGallery(!showAllGallery)}
+              className="px-8 py-3 border border-[#D4AF37] cursor-pointer text-[#1C1C1C] text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#D4AF37] transition-all duration-300"
+            >
+              {showAllGallery ? "Show Less" : "Show More"}
+            </button>
+          </div>
+        )}
+      </section>
+
+
+
 
       <Testimonials />
     </div>
